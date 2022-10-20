@@ -1,0 +1,28 @@
+<form [formGroup]="addNewCourse">
+    <div>
+        <div class="form-group">
+            <label for="courseName">Course Id :</label>
+            <input type="text" id="courseId" class="form-control" formControlName="courseId"><br>
+        </div>
+        <div class="form-group">
+            <label for="courseName">Course Name :</label>
+            <input type="text" id="courseName" class="form-control" formControlName="courseName"><br>
+        </div>
+        <div class="form-group">
+            <label for="authorName">Author Name :</label>
+            <input type="text" id="authorName" class="form-control" formControlName="authorName"><br>
+        </div>
+        <div class="form-group">
+            <label for="duration">Duration(hours) :</label>
+            <input type="number" min="5" max="50" id="duration" class="form-control" formControlName="duration"><br>
+        </div>
+        <div class="form-group">
+            <label for="availability">Availability :</label>
+            <input type="text" id="availability" class="form-control" formControlName="availability"><br>
+        </div>
+    </div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button (click)="saveNewCourse()" class="btn btn-success">Save</button> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button type="reset" class="btn btn-info">Clear</button>
+</form>

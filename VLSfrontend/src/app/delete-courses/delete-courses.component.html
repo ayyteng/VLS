@@ -1,0 +1,11 @@
+<form (ngSubmit)="deletingCourse()">
+    <div>
+        <h2> delete course by ID</h2>
+        <div class="form-group">
+            <label for="id">Id :</label>
+            <input type="number" id="id" name="id" class="form-control"  [(ngModel)]="course.courseId">
+        </div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    <button class="btn btn-success" class="btn btn-warning">Delete</button>
+    </div>
+</form>

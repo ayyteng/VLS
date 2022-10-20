@@ -1,0 +1,41 @@
+<html>
+  <head>
+  </head>
+  <body class="p-3 mb-2 bg-dark text-white">
+    <h1  class="display-4" align="center">
+        VLS
+        Dashboard
+    </h1><br><br>
+
+    <div class="navbar-header">
+    <nav>
+        <button type="button" class="btn btn-primary btn-sm" routerLink="/add-courses">Add a Course</button>&nbsp;
+        <button type="button" class="btn btn-primary btn-sm" routerLink="/delete-courses">Delete a Course</button>
+        <p></p>
+    </nav>
+    </div>
+    <table class="table table-dark">
+      <thead>
+          <tr>
+          <th scope="col">Course Id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Author</th>
+          <th scope="col">Duration</th>
+          <th scope="col">Availability</th>
+      </tr>
+    </thead>
+      <tbody>
+        <!-- for loop -->
+          <tr  *ngFor ="let courses of courses">
+            <ng-container>
+              <td>{{courses.courseId}}</td>
+              <td>{{courses.courseName}}</td>
+              <td>{{courses.authorName}}</td>
+              <td>{{courses.duration}}</td>
+              <td>{{courses.availability}}</td>
+            </ng-container>
+          </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
